@@ -10,17 +10,7 @@ lib.properties = {
 	fps: 30,
 	color: "#FFFFFF",
 	webfonts: {},
-	manifest: [
-		{src:"images/Layer10.png", id:"Layer10"},
-		{src:"images/Layer1_1.png", id:"Layer1_1"},
-		{src:"images/Layer2_1.png", id:"Layer2_1"},
-		{src:"images/Layer3_1.png", id:"Layer3_1"},
-		{src:"images/Layer4_1.png", id:"Layer4_1"},
-		{src:"images/Layer5_1.png", id:"Layer5_1"},
-		{src:"images/Layer6_1.png", id:"Layer6_1"},
-		{src:"images/Layer7_1.png", id:"Layer7_1"},
-		{src:"images/Layer9.png", id:"Layer9"}
-	]
+	manifest: []
 };
 
 
@@ -37,57 +27,66 @@ lib.webfontAvailable = function(family) {
 
 
 (lib.Layer10 = function() {
-	this.initialize(img.Layer10);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,373,84);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer1_1 = function() {
-	this.initialize(img.Layer1_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,694,619);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer2_1 = function() {
-	this.initialize(img.Layer2_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,702,621);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer3_1 = function() {
-	this.initialize(img.Layer3_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,702,462);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer4_1 = function() {
-	this.initialize(img.Layer4_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,347,135);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer5_1 = function() {
-	this.initialize(img.Layer5_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,702,621);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer6_1 = function() {
-	this.initialize(img.Layer6_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,208,134);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(6);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer7_1 = function() {
-	this.initialize(img.Layer7_1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,245,99);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(7);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer9 = function() {
-	this.initialize(img.Layer9);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,193,119);
+	this.spriteSheet = ss["Animatiomn_atlas_"];
+	this.gotoAndStop(8);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Layer10_1 = function(mode,startPosition,loop) {
@@ -466,8 +465,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,103.7,66.8);
 	// Layer 27
 	this.instance_11 = new lib.Symbol1();
 	this.instance_11.setTransform(175,155.9,1,1,0,0,0,175,154.9);
+	this.instance_11.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(1).to({regY:154.8,y:155.8},0).wait(69).to({y:155.7},0).wait(74));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(1).to({regY:154.8,y:155.8,alpha:0.1},0).wait(1).to({alpha:0.2},0).wait(1).to({alpha:0.3},0).wait(1).to({alpha:0.4},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.6},0).wait(1).to({alpha:0.7},0).wait(1).to({alpha:0.8},0).wait(1).to({alpha:0.9},0).wait(1).to({alpha:1},0).wait(134));
 
 	// Layer-5_1
 	this.instance_12 = new lib.Symbol1();
@@ -480,7 +480,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,103.7,66.8);
 	this.instance_13.setTransform(107.9,49,1,1,0,0,0,86.5,33.6);
 	this.instance_13.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(1).to({regY:33.7,y:49.1,alpha:0.018},0).wait(1).to({alpha:0.036},0).wait(1).to({alpha:0.054},0).wait(1).to({alpha:0.071},0).wait(1).to({alpha:0.089},0).wait(1).to({alpha:0.107},0).wait(1).to({alpha:0.125},0).wait(1).to({alpha:0.143},0).wait(1).to({alpha:0.161},0).wait(1).to({alpha:0.179},0).wait(1).to({alpha:0.196},0).wait(1).to({alpha:0.214},0).wait(1).to({alpha:0.232},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.268},0).wait(1).to({alpha:0.286},0).wait(1).to({alpha:0.304},0).wait(1).to({alpha:0.321},0).wait(1).to({alpha:0.339},0).wait(1).to({alpha:0.357},0).wait(1).to({alpha:0.375},0).wait(1).to({alpha:0.393},0).wait(1).to({alpha:0.411},0).wait(1).to({alpha:0.429},0).wait(1).to({alpha:0.446},0).wait(1).to({alpha:0.464},0).wait(1).to({alpha:0.482},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.518},0).wait(1).to({alpha:0.536},0).wait(1).to({alpha:0.554},0).wait(1).to({alpha:0.571},0).wait(1).to({alpha:0.589},0).wait(1).to({alpha:0.607},0).wait(1).to({alpha:0.625},0).wait(1).to({alpha:0.643},0).wait(1).to({alpha:0.661},0).wait(1).to({alpha:0.679},0).wait(1).to({alpha:0.696},0).wait(1).to({alpha:0.714},0).wait(1).to({alpha:0.732},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.768},0).wait(1).to({alpha:0.786},0).wait(1).to({alpha:0.804},0).wait(1).to({alpha:0.821},0).wait(1).to({alpha:0.839},0).wait(1).to({alpha:0.857},0).wait(1).to({alpha:0.875},0).wait(1).to({alpha:0.893},0).wait(1).to({alpha:0.911},0).wait(1).to({alpha:0.929},0).wait(1).to({alpha:0.946},0).wait(1).to({alpha:0.964},0).wait(1).to({alpha:0.982},0).wait(1).to({alpha:1},0).wait(88));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(1).to({regY:33.7,y:49.1,alpha:0.042},0).wait(1).to({alpha:0.083},0).wait(1).to({alpha:0.125},0).wait(1).to({alpha:0.167},0).wait(1).to({alpha:0.208},0).wait(1).to({alpha:0.25},0).wait(1).to({alpha:0.292},0).wait(1).to({alpha:0.333},0).wait(1).to({alpha:0.375},0).wait(1).to({alpha:0.417},0).wait(1).to({alpha:0.458},0).wait(1).to({alpha:0.5},0).wait(1).to({alpha:0.542},0).wait(1).to({alpha:0.583},0).wait(1).to({alpha:0.625},0).wait(1).to({alpha:0.667},0).wait(1).to({alpha:0.708},0).wait(1).to({alpha:0.75},0).wait(1).to({alpha:0.792},0).wait(1).to({alpha:0.833},0).wait(1).to({alpha:0.875},0).wait(1).to({alpha:0.917},0).wait(1).to({alpha:0.958},0).wait(1).to({alpha:1},0).wait(120));
 
 	// Layer-3_1
 	this.instance_14 = new lib.Symbol9();

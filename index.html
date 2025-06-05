@@ -22,10 +22,12 @@ function init() {
 	
 	canvas = document.getElementById("canvas");
 	images = images||{};
+	ss = ss||{};
 
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", handleFileLoad);
 	loader.addEventListener("complete", handleComplete);
+	loader.loadFile({src:"images/Animatiomn_atlas_.json", type:"spritesheet", id:"Animatiomn_atlas_"}, true);
 	loader.loadManifest(lib.properties.manifest);
 }
 
@@ -34,6 +36,8 @@ function handleFileLoad(evt) {
 }
 
 function handleComplete(evt) {
+	var queue = evt.target;
+	ss["Animatiomn_atlas_"] = queue.getResult("Animatiomn_atlas_");
 	exportRoot = new lib.Animatiomn();
 
 	stage = new createjs.Stage(canvas);
